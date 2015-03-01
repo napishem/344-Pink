@@ -1,7 +1,7 @@
 # Проект «Pink»
 
 * Студент: [Mikhail Poslavskiy](https://htmlacademy.ru/profile/id344).
-* Наставник: `Unknown`.
+* Наставник: [Евгений Сергеев](https://htmlacademy.ru/profile/id18983).
 
 --
 
