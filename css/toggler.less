@@ -1,0 +1,61 @@
+
+.main-nav__toggler {
+  align-items: center;
+  width: 50px;
+  height: 25px;
+  user-select: none;
+  background-color: #000;
+
+  > span {
+    display: inline-block;
+    width: 100%;
+    height: 4px;
+    background: #fff;
+    border-radius: 2px;
+    position: relative;
+    transition: background .3s .5s;
+    vertical-align: 9px;
+
+    &:before,
+    &:after {
+      width: 100%;
+      height: 4px;
+      background: #fff;
+      border-radius: 2px;
+      position: absolute;
+      left: 0;
+      content: '';
+      transform-origin: 50% 50%;
+      transition: top .3s .6s, transform .3s;
+    }
+
+    &:before {
+      top: 10px;
+    }
+
+    &:after {
+      top: -10px;
+    }
+  }
+
+  &--close {
+    > span {
+      transition: background .3s 0;
+      background: transparent;
+
+      &:before,
+      &:after {
+        transition: top .3s, transform .3s .5s;
+        top: 0;
+      }
+
+      &:before {
+        transform: rotate3d(0, 0, 1, 45deg);
+      }
+
+      &:after {
+        transform: rotate3d(0, 0, 1, -45deg);
+      }
+    }
+  }
+}

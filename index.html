@@ -4,14 +4,145 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Pink</title>
-  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/common.css">
 </head>
 
 <body>
+<header class="page-header">
+    <div class="page-header__nav-bar clearfix">
+      <a href="#" class="page-header__logo-link">
+          <img src="img/logo.png" alt="barbershop logo">
+      </a>
+      <nav class="main-nav">
+          <ul class="main-nav__list">
+              <li class="main-nav__item--active"><a href="#">Информация</a></li>
+              <li class="main-nav__item"><a href="#">Возможности</a></li>
+              <li class="main-nav__item"><a href="#">Отзывы<</a></li>
+              <li class="main-nav__item"><a href="#">Стоимость</a></li>
+          </ul>
+          <a href="" class="main-nav__toggler" id="toggler"><span></span></a>
+      </nav>
+    </div>
+    <p class="page-header__promo-text">
+      Взгляни на жизнь<br> иначе!
+    </p>
+    <img class="page-header__image" src="img/iphone-in-hand.png" alt="pink app">
+</header>
+<section class="download-app">
+    <button class="download-app__button">Скачать приложение</button>
+    <div class="download-app__os-icon">
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+    </div>
+    <p class="download-app__descr">Доступно для iPhone, iPad, Android, Windows phone, Mac OS, Windows 8</p>
+</section>
+<section class="features">
+    <!-- <svg class="features__svg" preserveAspectRatio="xMaxYMin meet" viewBox=" 0 1600 320" width="100%">
+              <polygon points="0, 0 320,0 00,32"/>
+        </svg> -->
+    <div class="features__first-block">
+      <p>Устали от серости мегаполиса?</p>
+      <p>Нам есть, что вам
+      предложить!</p>
+    </div>
+    <div class="features__second-block">
+      <div class="features__second-block-item">
+          <h2>Поднимает настроение
+      </h2>
+          <p>Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
+      </div>
+      <div class="features__second-block-item">
+          <h2>Меняет мир вокруг
+      </h2>
+          <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+      </div>
+      <div class="features__second-block-item">
+          <h2>Заводит новых друзей
+      </h2>
+          <p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+      </div>
+    </div>
+    <img class="features__iphone" src="img/iphone.png" alt="">
+</section>
+<section class="reviews">
+   <div class="reviews__slid">
+     <h3>
+         Николай Петров
+     </h3>
+      <blockquote>
+          «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+      </blockquote>
+   </div>
+   <div class="reviews__slid">
+     <h3>
+         Николай Петров
+     </h3>
+      <blockquote>
+          «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+      </blockquote>
+   </div>
+   <div class="pagination">
+      <i class="pagination__active"></i>
+      <i></i>
+      <i></i>
+    </div>
+</section>
+<section class="table">
+        <ul class="table__list">
+          <li class="table__item-head">base <br><span>1,99 USD</span></li>
+          <li class="table__item-yes">Розовый фильтр</li>
+          <li class="table__item-no">Смайлики</li>
+          <li class="table__item-no">Комментарии</li>
+        </ul>
+        <ul class="table__list">
+          <li class="table__item-head">Стандарт <br><span>3,99 USD</span></li>
+          <li class="table__item-yes">Розовый фильтр</li>
+          <li class="table__item-yes">Смайлики</li>
+          <li class="table__item-no">Комментарии</li>
+        </ul>
+        <ul class="table__list">
+          <li class="table__item-head">Анлим <br><span>9,99 USD</span></li>
+          <li class="table__item-yes">Розовый фильтр</li>
+          <li class="table__item-yes">Смайлики</li>
+          <li class="table__item-yes">Комментарии</li>
+        </ul>
+        <div class="pagination">
+           <i class="pagination__active"></i>
+           <i></i>
+           <i></i>
+         </div>
+</section>
 
-  <p>Репозиторий создан для обучения на продвинутом онлайн-интенсиве «<a href="https://htmlacademy.ru/advanced_intensive">Создание веб-интерфейсов с помощью HTML и CSS</a>».</p>
+<section class="contact">
+  <div class="contact__head">
+    Остались вопросы? Свяжитесь с нами!
+  </div>
+  <div class="contact__info">
+    Звоните: <br> <span>8 (800) 1000 900</span>
+  </div>
+  <div class="contact__info">
+    Пишите: <br> <span>hello@pinkapp.ru</span>
+  </div>
+  <div class="contact__info">
+    Приезжайте в гости: <br> <span>Санкт-Петербург, Невский проспект, д. 20</span>
+  </div>
+</section>
+<section class="map">
+  <div class="map__triangle">
+    <svg preserveAspectRatio="xMaxYMin meet" viewBox=" 0 1600 320" width="100%">
+		  <polygon points="0, 0 320,0 160,32"/>
+		</svg>
 
-  <!-- <script src="js/script.js"></script> -->
+  </div>
+  <div class="map__canvas" id="map-canvas">
+  </div>
+
+</section>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+<script src="js/toggler.js"></script>
+<script src="js/map.js"></script>
 
 </body>
 </html>
