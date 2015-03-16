@@ -3,6 +3,8 @@
 
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Pink</title>
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="css/common.css">
@@ -16,9 +18,9 @@
       </a>
       <nav class="main-nav">
           <ul class="main-nav__list">
-              <li class="main-nav__item--active"><a href="#">Информация</a></li>
+              <li class="main-nav__item main-nav__item--active"><a href="#">Информация</a></li>
               <li class="main-nav__item"><a href="#">Возможности</a></li>
-              <li class="main-nav__item"><a href="#">Отзывы<</a></li>
+              <li class="main-nav__item"><a href="#">Отзывы</a></li>
               <li class="main-nav__item"><a href="#">Стоимость</a></li>
           </ul>
           <a href="" class="main-nav__toggler" id="toggler"><span></span></a>
@@ -30,7 +32,7 @@
     <img class="page-header__image" src="img/iphone-in-hand.png" alt="pink app">
 </header>
 <section class="download-app">
-    <button class="download-app__button">Скачать приложение</button>
+    <a href="#" class="download-app__button">Скачать приложение</a>
     <div class="download-app__os-icon">
         <a href="#"></a>
         <a href="#"></a>
@@ -84,33 +86,35 @@
       </blockquote>
    </div>
    <div class="pagination">
-      <i class="pagination__active"></i>
       <i></i>
+      <i class="pagination__active"></i>
       <i></i>
     </div>
 </section>
 <section class="table">
-        <ul class="table__list">
-          <li class="table__item-head">base <br><span>1,99 USD</span></li>
-          <li class="table__item-yes">Розовый фильтр</li>
-          <li class="table__item-no">Смайлики</li>
-          <li class="table__item-no">Комментарии</li>
-        </ul>
-        <ul class="table__list">
-          <li class="table__item-head">Стандарт <br><span>3,99 USD</span></li>
-          <li class="table__item-yes">Розовый фильтр</li>
-          <li class="table__item-yes">Смайлики</li>
-          <li class="table__item-no">Комментарии</li>
-        </ul>
-        <ul class="table__list">
-          <li class="table__item-head">Анлим <br><span>9,99 USD</span></li>
-          <li class="table__item-yes">Розовый фильтр</li>
-          <li class="table__item-yes">Смайлики</li>
-          <li class="table__item-yes">Комментарии</li>
-        </ul>
+<div class="table__wrapper">
+  <ul class="table__list table__list--with-border">
+    <li class="table__item-head">base <br><span>1,99 USD</span></li>
+    <li class="table__item">Розовый фильтр</li>
+    <li class="table__item table__item--no">Смайлики</li>
+    <li class="table__item table__item--no">Комментарии</li>
+  </ul>
+  <ul class="table__list">
+    <li class="table__item-head">Стандарт <br><span>3,99 USD</span></li>
+    <li class="table__item">Розовый фильтр</li>
+    <li class="table__item">Смайлики</li>
+    <li class="table__item table__item--no">Комментарии</li>
+  </ul>
+  <ul class="table__list table__list--with-border">
+    <li class="table__item-head">Анлим <br><span>9,99 USD</span></li>
+    <li class="table__item">Розовый фильтр</li>
+    <li class="table__item">Смайлики</li>
+    <li class="table__item">Комментарии</li>
+  </ul>
+</div>
         <div class="pagination">
-           <i class="pagination__active"></i>
            <i></i>
+           <i class="pagination__active"></i>
            <i></i>
          </div>
 </section>
@@ -143,6 +147,6 @@
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
 <script src="js/toggler.js"></script>
 <script src="js/map.js"></script>
-
+<script src="js/menu.js"></script>
 </body>
 </html>
