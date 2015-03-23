@@ -14,7 +14,18 @@
 <header class="page-header">
     <div class="page-header__nav-bar clearfix">
       <a href="#" class="page-header__logo-link">
-          <img src="img/logo.png" alt="barbershop logo">
+
+          <picture>
+             <source 
+                 media="(min-width:700px)" 
+                 src="img/Pink-logo-2@1x.png"
+                 srcset="img/Pink-logo-2@2x.png 2x">
+            <source 
+                 media="(min-width:1200px)" 
+                 src="img/Pink-logo-3@1x.png"
+                 srcset="img/Pink-logo-3@2x.png 2x">
+              <img src="img/Pink-logo-1.png" alt="Pink logo">
+          </picture>
       </a>
       <nav class="main-nav">
           <ul class="main-nav__list">
@@ -70,20 +81,23 @@
     <img class="features__iphone--tablet" src="img/iphone-screen-2-3@1x.png" alt="">
 </section>
 <section class="news clearfix">
-  <img class="news__image" src="">
+  <div class="news__pic">
+    <span>24</span>
   </div>
+  
   <div class="news__content">
-  <div class="news__content--title">
+    <div class="news__content--title">
+      Эффект на 24 часа!
+    </div>
+    <div class="news__content--text">
+      Британские ученые провели исследования
+  и доказали, что положительный эффект
+  от использования приложения длится
+  целые сутки!
   </div>
-  <div class="news__content--text">
-    Британские ученые провели исследования
-и доказали, что положительный эффект
-от использования приложения длится
-целые сутки!
-</div>
-  <div class="news__content--link">
-    Узнать больше об исследовании
-  </div>
+    <div class="news__content--link">
+      Узнать больше об исследовании
+    </div>
   </div>
 </section>
 <section class="reviews">
@@ -114,7 +128,7 @@
 
   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none;">
 <defs>
-<g class="table__yes">
+<g id="table__yes">
   <path d="M29.936,0.439c-0.586-0.586-1.535-0.586-2.121,0L10.188,18.066l-7.627-7.627c-0.586-0.586-1.535-0.586-2.121,0
 	s-0.586,1.535,0,2.121l8.688,8.688c0.293,0.293,0.677,0.439,1.061,0.439s0.768-0.146,1.061-0.439L29.936,2.561
 	C30.521,1.975,30.521,1.025,29.936,0.439z"/>
@@ -129,62 +143,71 @@ s0.768-0.146,1.061-0.439c0.586-0.586,0.586-1.535,0-2.121L15.497,13.376z"/>
 </defs>
 </svg>
 
-  <ul class="table__list table__list--with-border">
-    <li class="table__item-head">base <br><span>1,99 USD</span></li>
+<ul class="table__list table__list--hidden">
     <li class="table__item">Розовый фильтр
-      <svg width="26.752px" height="26.752px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
-        <use xlink:href=".table__no"></use>
+    </li>
+    <li class="table__item">Смайлики
+    </li>
+    <li class="table__item">Комментарии
+    </li>
+  </ul>
+
+  <ul class="table__list">
+    <li class="table__item-head">base <br><span>1,99 USD</span></li>
+    <li class="table__item"><span>Розовый фильтр</span>
+      <svg class="table__item--yes" width="26.752px" height="26.752px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
+        <use xlink:href="#table__yes"></use>
       </svg>
     </li>
-    <li class="table__item table__item--no">Смайлики
-      <svg width="26.752px" height="26.752px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
+    <li class="table__item"><span>Смайлики</span>
+      <svg class="table__item--no" width="26.752px" height="26.752px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
         <use xlink:href="#table__no"></use>
       </svg>
     </li>
-    <li class="table__item table__item--no">Комментарии
-      <svg width="26.752px" height="26.752px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
+    <li class="table__item"><span>Комментарии</span>
+      <svg class="table__item--no" width="26.752px" height="26.752px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
         <use xlink:href="#table__no"></use>
       </svg>
     </li>
   </ul>
   <ul class="table__list">
     <li class="table__item-head">Стандарт <br><span>3,99 USD</span></li>
-    <li class="table__item">Розовый фильтр
-      <svg width="26.752px" height="26.752px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
-        <use xlink:href="#icon-play"></use>
+    <li class="table__item"><span>Розовый фильтр</span>
+      <svg class="table__item--yes" width="26.752px" height="26.752px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
+        <use xlink:href="#table__yes"></use>
       </svg>
     </li>
-    <li class="table__item">Смайлики
-      <svg width="26.752px" height="26.752px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
-        <use xlink:href="#icon-play"></use>
+    <li class="table__item"><span>Смайлики</span>
+      <svg class="table__item--yes" width="26.752px" height="26.752px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
+        <use xlink:href="#table__yes"></use>
       </svg>
     </li>
-    <li class="table__item table__item--no">Комментарии
-      <svg width="26.752px" height="26.752px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
-        <use xlink:href="#icon-play"></use>
+    <li class="table__item"><span>Комментарии</span>
+      <svg class="table__item--no" width="26.752px" height="26.752px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
+        <use xlink:href="#table__no"></use>
       </svg>
     </li>
   </ul>
-  <ul class="table__list table__list--with-border">
+  <ul class="table__list">
     <li class="table__item-head">Анлим <br><span>9,99 USD</span></li>
-    <li class="table__item">Розовый фильтр
-      <svg width="26.752px" height="26.752px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
-        <use xlink:href="#icon-play"></use>
+    <li class="table__item"><span>Розовый фильтр</span>
+      <svg class="table__item--yes" width="26.752px" height="26.752px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
+        <use xlink:href="#table__yes"></use>
       </svg>
     </li>
-    <li class="table__item">Смайлики
-      <svg width="26.752px" height="26.752px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
-        <use xlink:href="#icon-play"></use>
+    <li class="table__item"><span>Смайлики</span>
+      <svg class="table__item--yes" width="26.752px" height="26.752px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
+        <use xlink:href="#table__yes"></use>
       </svg>
     </li>
-    <li class="table__item">Комментарии
-      <svg width="26.752px" height="26.752px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
-        <use xlink:href="#icon-play"></use>
+    <li class="table__item"><span>Комментарии</span>
+      <svg class="table__item--yes" width="26.752px" height="26.752px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
+        <use xlink:href="#table__yes"></use>
       </svg>
     </li>
   </ul>
 </div>
-        <div class="pagination">
+        <div class="pagination pagination--hidden">
            <i></i>
            <i class="pagination__active"></i>
            <i></i>
@@ -217,9 +240,17 @@ s0.768-0.146,1.061-0.439c0.586-0.586,0.586-1.535,0-2.121L15.497,13.376z"/>
 
 </section>
 <footer class="footer">
-  <div class="logo-footer"></div>
-  <div class="btn-footer"></div>
-  <div class="copyright-footer"></div>
+  <div class="footer-logo">
+      <img src="img/Pink-logo-footer-2@1x.png" alt="">
+  </div>
+  <div class="footer-btns">
+      <a class="footer-btn footer-btn--tw" href=""></a>
+      <a class="footer-btn footer-btn--fb" href=""></a>
+      <a class="footer-btn footer-btn--yt" href=""></a>
+  </div>
+  <div class="footer-copyright">
+      <span class="footer-copyright__by">Website by</span><span class="footer-copyright__for">for</span>
+  </div>
 </footer>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
 <script src="js/toggler.js"></script>
