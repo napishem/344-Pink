@@ -2,7 +2,7 @@
 .main-nav__toggler {
   align-items: center;
   width: 50px;
-  height: 25px;
+  height: 30px;
   user-select: none;
   background-color: none;
 
@@ -13,7 +13,7 @@
     background: #fff;
     border-radius: 2px;
     position: relative;
-    transition: background .3s .5s;
+    transition: background 0s 0s;
     vertical-align: 9px;
 
     &:before,
@@ -36,6 +36,21 @@
     &:after {
       top: -10px;
     }
+    &:hover,
+    &:hover::before,
+    &:hover::after{
+      background: @color-pink;
+    }
+      
+    &:active,
+    &:active::before,
+    &:active::after{
+      background: rgba(198, 89, 78, .3);
+
+    }
+    &:hover{
+      transition: background 0s ease 0s;
+    }
   }
 
   &--close {
@@ -55,6 +70,10 @@
 
       &:after {
         transform: rotate3d(0, 0, 1, -45deg);
+      }
+      &:hover {
+        transition: background .3s 0;
+        background: transparent;
       }
     }
   }

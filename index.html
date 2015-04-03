@@ -22,14 +22,14 @@ document.createElement( "picture" );
         <a href="#" class="page-header__logo-link">
         
             <picture>
-               <source 
-                   media="(min-width:700px)" 
-                   src="img/Pink-logo-2@1x.png"
-                   srcset="img/Pink-logo-2@2x.png 2x">
               <source 
                    media="(min-width:1200px)" 
-                   src="img/Pink-logo-3@1x.png"
-                   srcset="img/Pink-logo-3@2x.png 2x">
+                   srcset="img/Pink-logo-3@1x.png, img/Pink-logo-3@2x.png 2x">
+               <source 
+                   media="(min-width:700px)" 
+                   srcset="img/Pink-logo-2@1x.png,
+img/Pink-logo-2@2x.png 2">
+              
                 <img src="img/Pink-logo-1.png" alt="Pink logo" width="145px">
             </picture>
         </a>
@@ -75,9 +75,13 @@ document.createElement( "picture" );
           <p>Нам есть, что вам
           <br>предложить!</p>
         </div>
+        
       </div>
       <div class="wrapper">
         <div class="features__second-block">
+         <!-- <svg class="features__polygon" width="100%" height="100%" viewBox="0 0 1600 1080" preserveAspectRatio="xMidYMid slice">
+           <polygon class="svg-bg-work" points="0,0 0,160 1600,30 1600,0"></polygon>
+         </svg> -->
           <div class="features__second-block-item">
               <h2>Поднимает настроение
           </h2>
@@ -124,37 +128,56 @@ document.createElement( "picture" );
   </div>
 </section>
 <section class="reviews">
-<div class="wrapper">
-     <div class="reviews__slid">
-       <div class="reviews__author">Николай Петров
+<div class="reviews__wrapper">
+  <div class="reviews__slid">
+       <div class="wrapper">
+         <div class="reviews__author">Николай Петров
+          </div>
+          <blockquote>
+              «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+          </blockquote>
+          <div class="reviews__author reviews__author--bottom">Николай Петров
+          </div>
+          <div class="reviews__descr">
+            25 лет, водитель трамвая
+          </div>
+       </div>
+       </div>
+       <div class="reviews__slid">
+         
+          <div class="wrapper">
+            <div class="reviews__author">Николай Петров
+            </div>
+                     
+            <blockquote>
+                «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+            </blockquote>
+          </div>
+       </div>
+       <div class="reviews__slid">
+         
+          <div class="wrapper">
+            <div class="reviews__author">Николай Петров
+            </div>
+                     
+            <blockquote>
+                «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+            </blockquote>
+          </div>
+       </div>  
+</div>
+<div class="slider-nav"><!-- кнопки "предыдущая" и "следующая" -->
+        <button type="button" class="slider-previous">Предыдущий</button>
+        <button type="button" class="slider-next">Следующий</button>
+    </div>
+<div class="pagination--reviews">
+          <a href="#" class="current" data-slide="0"></a>
+          <a href="#" class="pagination--reviews__active" data-slide="1"></a>
+          <a href="#" data-slide="2"></a>
         </div>
-        <blockquote>
-            «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
-        </blockquote>
-        <div class="reviews__author reviews__author--bottom">Николай Петров
-        </div>
-        <div class="reviews__descr">
-          25 лет, водитель трамвая
-        </div>
-     </div>
-     <div class="reviews__slid">
-       
-        <div class="reviews__author">Николай Петров
-        </div>
-       
-        <blockquote>
-            «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
-        </blockquote>
-     </div>
-     <div class="pagination">
-        <i></i>
-        <i class="pagination__active"></i>
-        <i></i>
-      </div>
-   </div>
 </section>
 <section class="table">
-<div class="table__wrapper">
+
 
   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none;">
 <defs>
@@ -173,7 +196,7 @@ s0.768-0.146,1.061-0.439c0.586-0.586,0.586-1.535,0-2.121L15.497,13.376z"/>
 </defs>
 </svg>
 
-<ul class="table__list table__list--hidden">
+<ul class="table__list2 table__list--hidden">
     <li class="table__item">Розовый фильтр
     </li>
     <li class="table__item">Смайлики
@@ -182,66 +205,70 @@ s0.768-0.146,1.061-0.439c0.586-0.586,0.586-1.535,0-2.121L15.497,13.376z"/>
     </li>
   </ul>
 
-  <ul class="table__list">
-    <li class="table__item-head">base <br><span>1,99 USD</span></li>
-    <li class="table__item"><span>Розовый фильтр</span>
-      <svg class="table__item--yes" width="26.752px" height="26.752px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
-        <use xlink:href="#table__yes"></use>
-      </svg>
-    </li>
-    <li class="table__item"><span>Смайлики</span>
-      <svg class="table__item--no" width="26.752px" height="26.752px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
-        <use xlink:href="#table__no"></use>
-      </svg>
-    </li>
-    <li class="table__item"><span>Комментарии</span>
-      <svg class="table__item--no" width="26.752px" height="26.752px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
-        <use xlink:href="#table__no"></use>
-      </svg>
-    </li>
-  </ul>
-  <ul class="table__list">
-    <li class="table__item-head">Стандарт <br><span>3,99 USD</span></li>
-    <li class="table__item"><span>Розовый фильтр</span>
-      <svg class="table__item--yes" width="26.752px" height="26.752px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
-        <use xlink:href="#table__yes"></use>
-      </svg>
-    </li>
-    <li class="table__item"><span>Смайлики</span>
-      <svg class="table__item--yes" width="26.752px" height="26.752px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
-        <use xlink:href="#table__yes"></use>
-      </svg>
-    </li>
-    <li class="table__item"><span>Комментарии</span>
-      <svg class="table__item--no" width="26.752px" height="26.752px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
-        <use xlink:href="#table__no"></use>
-      </svg>
-    </li>
-  </ul>
-  <ul class="table__list">
-    <li class="table__item-head">Анлим <br><span>9,99 USD</span></li>
-    <li class="table__item"><span>Розовый фильтр</span>
-      <svg class="table__item--yes" width="26.752px" height="26.752px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
-        <use xlink:href="#table__yes"></use>
-      </svg>
-    </li>
-    <li class="table__item"><span>Смайлики</span>
-      <svg class="table__item--yes" width="26.752px" height="26.752px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
-        <use xlink:href="#table__yes"></use>
-      </svg>
-    </li>
-    <li class="table__item"><span>Комментарии</span>
-      <svg class="table__item--yes" width="26.752px" height="26.752px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
-        <use xlink:href="#table__yes"></use>
-      </svg>
-    </li>
-  </ul>
-</div>
-        <div class="pagination pagination--hidden">
-           <i></i>
-           <i class="pagination__active"></i>
-           <i></i>
-         </div>
+<div class="table__slider">
+   <div class="table__wrapper">
+    <ul class="table__list">
+      <li class="table__item-head">base <br><span>1,99 USD</span></li>
+      <li class="table__item"><span>Розовый фильтр</span>
+        <svg class="table__item--yes" width="26.752px" height="26.752px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
+          <use xlink:href="#table__yes"></use>
+        </svg>
+      </li>
+      <li class="table__item"><span>Смайлики</span>
+        <svg class="table__item--no" width="26.752px" height="26.752px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
+          <use xlink:href="#table__no"></use>
+        </svg>
+      </li>
+      <li class="table__item"><span>Комментарии</span>
+        <svg class="table__item--no" width="26.752px" height="26.752px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
+          <use xlink:href="#table__no"></use>
+        </svg>
+      </li>
+    </ul>
+    <ul class="table__list">
+      <li class="table__item-head table__item-head-ribbon">Стандарт <br><span>3,99 USD</span></li>
+      <li class="table__item"><span>Розовый фильтр</span>
+        <svg class="table__item--yes" width="26.752px" height="26.752px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
+          <use xlink:href="#table__yes"></use>
+        </svg>
+      </li>
+      <li class="table__item"><span>Смайлики</span>
+        <svg class="table__item--yes" width="26.752px" height="26.752px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
+          <use xlink:href="#table__yes"></use>
+        </svg>
+      </li>
+      <li class="table__item"><span>Комментарии</span>
+        <svg class="table__item--no" width="26.752px" height="26.752px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
+          <use xlink:href="#table__no"></use>
+        </svg>
+      </li>
+    </ul>
+    <ul class="table__list">
+      <li class="table__item-head">Анлим <br><span>9,99 USD</span></li>
+      <li class="table__item"><span>Розовый фильтр</span>
+        <svg class="table__item--yes" width="26.752px" height="26.752px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
+          <use xlink:href="#table__yes"></use>
+        </svg>
+      </li>
+      <li class="table__item"><span>Смайлики</span>
+        <svg class="table__item--yes" width="26.752px" height="26.752px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
+          <use xlink:href="#table__yes"></use>
+        </svg>
+      </li>
+      <li class="table__item"><span>Комментарии</span>
+        <svg class="table__item--yes" width="26.752px" height="26.752px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
+          <use xlink:href="#table__yes"></use>
+        </svg>
+      </li>
+    </ul>
+  </div>
+
+<div class="pagination--table">
+          <a href="#" class="current" data-table="0"></a>
+          <a href="#"  data-table="1"></a>
+          <a href="#" data-table="2"></a>
+        </div>
+        </div>
 </section>
 
 <section class="contact">
@@ -253,7 +280,7 @@ s0.768-0.146,1.061-0.439c0.586-0.586,0.586-1.535,0-2.121L15.497,13.376z"/>
       Звоните: <br> <span>8 (800) 1000 900</span>
     </div>
     <div class="contact__info contact__info--second">
-      Пишите: <br> <span>hello@pinkapp.ru</span>
+      Пишите: <br> <a href="mailto:hello@pinkapp.ru">hello@pinkapp.ru</a>
     </div>
     <div class="contact__info contact__info--third">
       Приезжайте в гости: <br> <span>Санкт-Петербург, Невский проспект, д. 20</span>
@@ -273,9 +300,21 @@ s0.768-0.146,1.061-0.439c0.586-0.586,0.586-1.535,0-2.121L15.497,13.376z"/>
 </section>
 <footer class="footer">
   <div class="wrapper">
-    <div class="footer-logo">
-        <img src="img/Pink-logo-footer-2@1x.png" alt="">
-    </div>
+    
+        <a href="#" class="footer-logo">
+        
+            <picture>
+              <source 
+                   media="(min-width:1200px)" 
+                   srcset="img/Pink-logo-footer-3@1x.png, img/Pink-logo-footer-3@2x.png 2x">
+               <source 
+                   media="(min-width:700px)" 
+                   srcset="img/Pink-logo-footer-2@1x.png,
+img/Pink-logo-footer-2@2x.png 2">
+              
+            </picture>
+        </a>
+    
     <div class="footer-btns">
         <a class="footer-btn footer-btn--tw" href=""></a>
         <a class="footer-btn footer-btn--fb" href=""></a>
@@ -290,5 +329,8 @@ s0.768-0.146,1.061-0.439c0.586-0.586,0.586-1.535,0-2.121L15.497,13.376z"/>
 <script src="js/toggler.js"></script>
 <script src="js/map.js"></script>
 <script src="js/menu.js"></script>
+<script src="js/slider-reviews.js"></script>
+<script src="js/slider-table.js"></script>
+<script src="js/slider-reviews-desktop.js"></script>
 </body>
 </html>
