@@ -1,0 +1,45 @@
+.map {
+  position: relative;
+  overflow: hidden;
+
+
+// треугольник на карте
+  &:before {
+    position: absolute;
+    content: '';
+    width: 50%;
+    height: 10vw;
+    background: linear-gradient(11deg, transparent 10vw, #FFF 10vw);
+    z-index: 1;
+  }
+
+  &:after {
+    position: absolute;
+    content: '';
+    width: 50%;
+    height: 10vw;
+    background: linear-gradient(-11deg, transparent 10vw, #FFF 10vw);
+    z-index: 1;
+    top: 0;
+    right: 0;
+  }
+
+  &__canvas {
+    height: 200px;
+    @media @tablet {
+      height: 375px;
+    }
+    @media @desktop {
+      height: 520px;
+    }
+  }
+
+  &__triangle {
+    position: absolute;
+    top: 200px;
+  }
+
+  &__triangle polygon{
+    fill: @color-white;
+  }
+}

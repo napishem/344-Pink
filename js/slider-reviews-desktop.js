@@ -7,8 +7,8 @@
 		init: function() {
 			this.wrapper = this.el.querySelector(".reviews__wrapper");
 			this.slides = this.el.querySelectorAll(".reviews__slid");
-			this.previous = this.el.querySelector(".slider-previous");
-			this.next = this.el.querySelector(".slider-next");
+			this.previous = this.el.querySelector(".reviews__btn-prev");
+			this.next = this.el.querySelector(".reviews__btn-next");
 			this.index = 0;
 			this.total = this.slides.length;
 			this.actions();

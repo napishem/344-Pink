@@ -1,0 +1,98 @@
+.news {
+  display: none;
+  @media @tablet {
+    display: block;
+    min-height: 360px;
+    padding: 56px 40px 0 40px;
+  }
+  @media @desktop {
+    background-color: @color-gray-bg;
+    padding-bottom: 65px;
+    min-height: auto;
+    padding-top: 52px;
+  }
+
+      &__pic-wrapper {
+      width: 50%;
+      float: left;
+      @media @desktop {
+        width: 37%;
+      }
+    }
+  
+    &__pic {
+      position: relative;
+      background: url('../img/timer-2.svg') no-repeat;
+      height: 302px;
+      width: 263px; 
+      @media @desktop {
+        background: url('../img/timer-2-dark.svg') no-repeat;
+      }
+    }
+  
+    &__pic span {
+      display: block;
+      position: absolute;
+      bottom: -20px;
+      left: 70px;
+      line-height: 104px;
+      font-size: 104px;
+      color: @color-pink;
+      font-weight: bold;
+      width: 215px;
+      height: 215px;
+    }
+  
+    &__pic span:after {
+      content: " ";
+      position: absolute;
+      width: 211px;
+      height: 211px;
+      border-radius: 50%;
+      border: 10px solid @color-pink;
+      bottom: 45px;
+      left: -45px;
+    }
+  
+    &__content {
+      width: 50%;
+      float: right;
+      color: @color-dark;
+      @media @desktop {
+        width: 63%;
+      }
+    }
+  
+    &__content-title {
+      font-size: 30px;
+      line-height: 36px;
+      font-weight: bold;
+      padding-top: 45px;
+      padding-bottom: 15px;
+      @media @desktop {
+        padding-bottom: 22px;
+        padding-top: 75px;
+      }
+    }
+  
+    &__content-text {
+      font-size: 14px;
+      line-height: 24px;
+      font-weight: normal;
+      padding-bottom: 7px;
+      @media @desktop {
+        font-size: 18px;
+        padding-bottom: 27px;
+      }
+    }
+  
+    &__content-link {
+      font-size: 14px;
+      line-height: 24px;
+      font-weight: normal;
+      color: @color-pink;
+      @media @desktop {
+        font-size: 18px;
+      }
+    }
+}

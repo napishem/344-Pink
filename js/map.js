@@ -7,7 +7,7 @@ function initialize() {
                                 mapOptions);
   var image = "../img/map-image.png";
   var myLatLng = new google.maps.LatLng(59.936118, 30.321008);
-  var beachMarker = new google.maps.Marker({
+  var marker = new google.maps.Marker({
     position: myLatLng,
     map: map,
     icon: image
