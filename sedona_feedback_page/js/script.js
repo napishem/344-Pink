@@ -14,7 +14,7 @@ var plus = document.querySelectorAll(".plus");
       var val =  (parseInt(numb.value) + 1);
 
       if (isNaN(val)) {
-        val = 0;
+        val = 1;
       }
 
       numb.value =  val;
@@ -44,4 +44,37 @@ var plus = document.querySelectorAll(".plus");
 
     })
   };
+})();
+
+
+
+(function() {
+
+var form = document.querySelector('.response')
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  var data = new FormData(form);
+  request(data, function(response) {
+    console.log(response);
+  });
+});
+
+function request(data, fn) {
+
+var xhr = new XMLHttpRequest();
+
+xhr.open("post", "/send?" + (new Date()).getTime());
+
+xhr.addEventListener("readystatechange", function() {
+  if (xhr.readyState == 4) {
+    fn(xhr.responseText);
+  }
+});
+
+xhr.send(data);
+}
+
+
 })();
