@@ -7,7 +7,7 @@ module.exports = function(grunt) {
      less: {
        style: {
          files: {
-           "build/css/style.css": ["source/less/style.less"]
+           "build/css/common.css": ["source/less/common.less"]
          }
        }
      },
@@ -17,14 +17,14 @@ module.exports = function(grunt) {
         browsers: ["last 2 version", "ie 10"]
       },
       style: {
-        src: "build/css/style.css"
+        src: "build/css/common.css"
       }
     },
 
     cmq: {
       style: {
         files: {
-          "build/css/style.css": ["build/css/style.css"]
+          "build/css/common.css": ["build/css/common.css"]
         }
       }
     },
@@ -36,7 +36,7 @@ module.exports = function(grunt) {
           report: "gzip"
         },
         files: {
-          "build/css/style.min.css": ["build/css/style.css"]
+          "build/css/common.min.css": ["build/css/common.css"]
         }
       }
     },
