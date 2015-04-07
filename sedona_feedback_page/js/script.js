@@ -34,11 +34,11 @@ var plus = document.querySelectorAll(".plus");
       val = 0;
       }
 
-      if (numb === this.parentNode.querySelector(".children-count")) {
+      if (numb === this.parentNode.querySelector(".people-count") || numb === this.parentNode.querySelector(".travel-time")) {
         if (val < 1 || isNaN(val)) {
         val = 1;
       }
-}
+} 
 
       numb.value =  val;
 

@@ -37,10 +37,10 @@
 
   &__slider {
     position: relative;
-    width: 320px;
+    width: 100%;
     margin: 0 auto;
     overflow: hidden;
-    padding: 0 20px;
+    padding: 0 calc(~'(100% - 280px) / 2');
     padding-bottom: 35px;
     @media @tablet {
       display: inline-block;
@@ -143,10 +143,17 @@
     margin: 1px 0;
     padding: 0px 50px 3px 50px;
     text-align: center;
-    left: -51px;
-    top: 7px;
+    left: -55px;
+    top: 5px;
     transform: rotate(-45deg);
     background-color: @color-pink;
+    @media @desktop {
+      left: -50px;
+      top: 10px;
+      padding-top: 1px;
+      padding-bottom: 0;
+      height: 35px;
+    }
   }
 
   &__item {
