@@ -4,6 +4,7 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+
      less: {
        style: {
          files: {
@@ -70,6 +71,21 @@ module.exports = function(grunt) {
 
     clean: {
       build: ["build"]
+    },
+
+    prettify: {
+      options: {
+        "indent": 4,
+        "condense": true,
+        "indent_inner_html": true,
+        "unformatted": [
+          "a",
+          "pre"
+        ]
+      },
+      html: {
+        "build/index.html": ["source/index.html"]
+      }
     }
   });
 
@@ -80,7 +96,8 @@ module.exports = function(grunt) {
    "autoprefixer",
    "cmq",
    "cssmin",
-   "imagemin"
+   "imagemin",
+   "prettify"
    ]);
 
 };
