@@ -6,7 +6,7 @@ prepros.cfg
 *.sublime*
 *.map
 sedona_feedback_page
-source
+build
 js
 css
 
