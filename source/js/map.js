@@ -6,7 +6,7 @@ function initialize() {
   }
   var map = new google.maps.Map(document.getElementById('map-canvas'),
                                 mapOptions);
-  var image = "../img/map-image.png";
+  var image = "http://rand.icube.by/pink/img/map-image.png";
   var myLatLng = new google.maps.LatLng(59.936118, 30.321008);
   var marker = new google.maps.Marker({
     position: myLatLng,
