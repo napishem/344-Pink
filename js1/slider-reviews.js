@@ -1,13 +1,12 @@
-
-function Slider2( element ) {
+function Slider( element ) {
 	this.el = document.querySelector( element );
 	this.init();
 }
 
-Slider2.prototype = {
+Slider.prototype = {
 	init: function() {
-		this.links = this.el.querySelectorAll( ".pagination--table a" );
-		this.wrapper = this.el.querySelector( ".table__wrapper" );
+		this.links = this.el.querySelectorAll( ".pagination a" );
+		this.wrapper = this.el.querySelector( ".reviews__wrapper" );
 		this.navigate();
 	},
     navigate: function() {
@@ -22,9 +21,9 @@ Slider2.prototype = {
 			e.preventDefault();
 			var a = this;
 			self.setCurrentLink( a );
-			var index = parseInt( a.getAttribute( "data-table" ), 10 ) + 1;
-			var currentSlide = self.el.querySelector( ".table__list:nth-child(" + index + ")" );
-			self.wrapper.style.left = -currentSlide.offsetLeft + "px";
+			var index = parseInt( a.getAttribute( "data-slide" ), 10 ) + 1;
+			var currentSlide = self.el.querySelector( ".reviews__slid:nth-child(" + index + ")" );
+			self.wrapper.style.left = "-" + currentSlide.offsetLeft + "px";
 		},
 		false);
 	},
@@ -42,5 +41,5 @@ Slider2.prototype = {
 	}
 };
 document.addEventListener("DOMContentLoaded", function() {
-	var aSlider2 = new Slider2( ".table__slider" );
+	var aSlider = new Slider( ".reviews" );
 });

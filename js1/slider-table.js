@@ -24,7 +24,7 @@ Slider2.prototype = {
 			self.setCurrentLink( a );
 			var index = parseInt( a.getAttribute( "data-table" ), 10 ) + 1;
 			var currentSlide = self.el.querySelector( ".table__list:nth-child(" + index + ")" );
-			self.wrapper.style.left = -currentSlide.offsetLeft + "px";
+			self.wrapper.style.left = "-" + currentSlide.offsetLeft + "px";
 		},
 		false);
 	},
